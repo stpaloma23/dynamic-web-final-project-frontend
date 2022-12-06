@@ -13,7 +13,7 @@ function LoginPage(){
             <div className="logo-wrapper">
                 <h1 className="logo">Entry 🗝</h1>
             </div>
-            <div className="page-contents">
+            <div className="login-page-contents">
                 <div className="login-wrapper">
                     <h1>Login Page</h1>
                     <LoginForm />

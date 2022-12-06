@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 .App {
-  background-color: #CBC3E3  ;
+  background-color: #e7deff  ;
   min-height: 100%;
-  min-width: 100vh
+  min-width: 100%;
 }
 .page-wrapper h1 {
   font-family: Shrikhand;
@@ -19,16 +19,16 @@
   height: 100%;
   width: 100%;
   align-items: center;
-  padding: 20px;
 }
 .page-wrapper{
   font-family: "Indie Flower";
+  width: 100%;
 }
 .logo {
   font-size: 72px;
 }
 .logo-wrapper{
-  padding: 50px;
+  padding: 20px;
 }
 .login-wrapper {
   align-items: center;
@@ -72,8 +72,12 @@ button {
   border-radius: 20px;
 
 }
-.page-contents{
+.login-page-contents {
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .create-account-wrapper {
   align-items: center;
@@ -93,5 +97,84 @@ button {
   height: 100%;
   width: 100%;
   align-items: center;
-  padding: 20px;
+}
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+.feelings-contents { 
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+}
+.awesome {
+  background-color:#66b266;
+}
+.good {
+  background-color:#a5d46a;
+}
+.okay {
+  background-color:	#ffff80;
+}
+.bad {
+  background-color:	#ffc080;
+}
+.awful {
+  background-color:#ffa080;
+}
+.feelings-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.journal-entry-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.journal-entry-wrapper h1 {
+  margin-bottom: 30px;
+
+}
+.entry-page-contents{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.emotion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emotion p {
+  align-self: center;
+}
+.blog-post {
+  width: 100%;
+  min-height: 220px;
+}
+.make-entry-button {
+  font-family: Shrikhand;
+  font-size: 30px;
+}
+.create-entry-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+}
+.journal-entry-wrapper h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+.feelings-wrapper h4 {
+  align-self: start;
+  font-size: 28px;
+  margin: 0;
 }

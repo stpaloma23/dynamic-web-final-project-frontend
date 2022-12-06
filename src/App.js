@@ -47,7 +47,7 @@ function App() {
         <CreateUserPage />),
     },
     {
-      path: "/how-is-your-day",
+      path: "/entry",
       element:( 
         <HowIsYourDayPage />),
     },
