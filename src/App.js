@@ -10,6 +10,8 @@ import {getAuth, onAuthStateChanged} from "firebase/auth";
 import CreateUserPage from './pages/CreateUserPage';
 import UserProfilePage from './pages/UserProfilePage';
 import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
+import HowIsYourDayPage from './pages/HowIsYourDayPage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDkI8qRPvQPYjW4imjUv3ExXdHltWqjnU0",
@@ -29,20 +31,25 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <UserProfilePage />,
+      element: <LoginPage />,
     },
     {
-      path: "/login",
-      element: <LoginPage />,
+      path: "/home",
+      element: <HomePage />,
+    },
+    {
+      path: "/my-profile",
+      element: <UserProfilePage />,
     },
     {
       path: "/create",
       element:( 
-        <CreateUserPage 
-          isLoggedIn={isLoggedIn}
-          setIsLoggedIn={setIsLoggedIn} 
-          setUserInformation={setUserinformation}
-        />),
+        <CreateUserPage />),
+    },
+    {
+      path: "/how-is-your-day",
+      element:( 
+        <HowIsYourDayPage />),
     },
   ]);
 
@@ -64,9 +71,10 @@ function App() {
       })
     }
   }, [appInitialized]);
+  
   return (
     <div className="App">
-      
+      <RouterProvider router={router} />
     </div>
   );
 }
