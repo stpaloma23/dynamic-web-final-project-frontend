@@ -4,10 +4,6 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 import Feelings from "../components/Feelings";
 
 function HowIsYourDayPage(){
-    // const navigate = useNavigate();
-    // const navigateToLoginPage = () => {
-    //     navigate('/');
-    // };
     return (
         <div className="page-wrapper create-entry-wrapper">
             <div className="logo-wrapper">

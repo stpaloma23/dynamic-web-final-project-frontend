@@ -1,14 +1,31 @@
+import { getAuth, signOut } from 'firebase/auth';
 import React from 'react';
 
-function Header({}){
+function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}){
+    var displayName = "";
+    console.log(userInformation); 
+    if (isLoggedIn) {
+        displayName = userInformation.displayName;
+    }
+    function logout() {
+        const auth = getAuth()
+        signOut(auth)
+            .then(()=>{
+                setUserInformation({})
+                setIsLoggedIn(false)
+            })
+            .catch((error)=>{
+                console.warn(error)
+            })
+    }
     return (
         <header>
-            <h1>Entry</h1>
+            <h1 className='logo'>Entry🗝</h1>
             <nav>
-                <a href="/">Login</a>
+                <p>Hi {displayName}</p>
                 <a href="/my-profile">My Profile</a>
-                <a> Write an Entry</a>
-                <a>Logout</a>
+                <a href="/entry"> Write an Entry</a>
+                {isLoggedIn && <a onClick={()=>logout()}>Logout</a>}
             </nav>
         </header>
     );

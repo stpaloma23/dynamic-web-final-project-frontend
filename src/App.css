@@ -23,6 +23,7 @@
 .page-wrapper{
   font-family: "Indie Flower";
   width: 100%;
+  min-height:100%;
 }
 .logo {
   font-size: 72px;
@@ -177,4 +178,37 @@ button {
   align-self: start;
   font-size: 28px;
   margin: 0;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  margin-left: 25px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 40px;
+}
+nav a {
+  margin-bottom: 20px;
+}
+.home-page-wrapper {
+  height: 100vh;
+
+}
+.post-card {
+  background-color: white;
+  border: black 1px solid;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+}
+.home-page-wrapper {
+  display: flex;
+}
+.post-card-emotion {
+  display: flex;
 }

@@ -1,18 +1,21 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 
 function CreateUserForm({createUser}) {
+    const navigate = useNavigate();
+    
     return (
-        <form className='form-element' onSubmit={(e) =>createUser(e)}>
-            <label for="userName">User Name</label>
-            <input type="text" name="userName"/>
+        <form className='form-element' onSubmit={(e) => createUser(e)}>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email"/>
 
-            <label for="userPassword">Password</label>
-            <input type="password" name="userPassword"/>
+            <label htmlFor="displayName">User Name</label>
+            <input type="text" name="displayName"/>
 
-            <label for="userEmail">Email</label>
-            <input type="text" name="userEmail"/>
+            <label htmlFor="userPassword">Password</label>
+            <input type="password" name="password"/>
 
-            <button className="login-submit-btn" type="submit">Submit</button>
+            <button className="login-submit-btn"> Submit</button>
         </form>
     );
 }
