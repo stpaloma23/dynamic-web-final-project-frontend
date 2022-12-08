@@ -23,6 +23,7 @@ function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}
             <h1 className='logo'>Entry🗝</h1>
             <nav>
                 <p>Hi {displayName}</p>
+                <a href='/home'>My Entries</a>
                 <a href="/my-profile">My Profile</a>
                 <a href="/entry"> Write an Entry</a>
                 {isLoggedIn && <a onClick={()=>logout()}>Logout</a>}

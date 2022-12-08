@@ -5,6 +5,7 @@
   background-color: #e7deff  ;
   min-height: 100%;
   min-width: 100%;
+  color:#06114F;
 }
 .page-wrapper h1 {
   font-family: Shrikhand;
@@ -27,16 +28,20 @@
 }
 .logo {
   font-size: 72px;
+  text-shadow: -1px 0 #5EC5D4, 0 1px #5EC5D4, 1px 0 #5EC5D4, 0 -1px #5EC5D4;
 }
 .logo-wrapper{
-  padding: 20px;
+  display: flex;
+}
+.exit-entry{
+  align-self: flex-end;
 }
 .login-wrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
   padding: 50px;
-  background-color: #710096;
+  background-color: #A782EC;
   border-radius: 20px;
   min-width: 40%;
   width: 500px;
@@ -59,6 +64,7 @@ input {
   margin-bottom: 30px;
   width: inherit;
   height: 30px;
+  border: #06114F 2px solid;
 }
 label {
   align-self: flex-start;
@@ -85,7 +91,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 50px;
-  background-color: #710096;
+  background-color: #A782EC;
   border-radius: 20px;
   min-width: 40%;
   width: 500px;
@@ -95,13 +101,13 @@ button {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   align-items: center;
 }
 .circle {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 50px;
 }
 .feelings-contents { 
@@ -149,17 +155,34 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.emotion:hover {
+  border: #06114F solid 2px;
+  border-radius: 20px;
+  cursor:grab;
 }
 .emotion p {
   align-self: center;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 10px;
 }
 .blog-post {
   width: 100%;
-  min-height: 220px;
+  min-height: 170px;
 }
 .make-entry-button {
   font-family: Shrikhand;
   font-size: 30px;
+  margin-right: 20px;
+  cursor:grab;
+}
+.close-entry-button{
+  font-family: Shrikhand;
+  font-size: 30px;
+  cursor: grab;
 }
 .create-entry-wrapper {
   display: flex;
@@ -182,33 +205,66 @@ button {
 header {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 30%;
-  margin-left: 25px;
+  border-right:  #06114F solid 2px;
+  background-color: #A782EC;
+  padding-left: 20px;
 }
 nav {
   display: flex;
   flex-direction: column;
-  height: 100%;
   font-size: 40px;
 }
 nav a {
   margin-bottom: 20px;
-}
-.home-page-wrapper {
-  height: 100vh;
-
 }
 .post-card {
   background-color: white;
   border: black 1px solid;
   margin-bottom: 20px;
   padding: 15px;
-  width: 100%;
 }
 .home-page-wrapper {
   display: flex;
 }
 .post-card-emotion {
   display: flex;
+}
+.profile-page-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+.create-entry-content-wrapper {
+  margin: 0 auto;
+  width: 75%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.submit-or-close-buttons {
+  display: flex;
+  align-items: center;
+}
+.home-page-feed{
+  width:100%;
+
+}
+.home-page-contents-wrapper {
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+ .home-page-contents-wrapper h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background-color: #06114F;
+  color: white;
 }
