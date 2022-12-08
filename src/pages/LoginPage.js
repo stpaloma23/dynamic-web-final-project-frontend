@@ -10,27 +10,33 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }){
     const navigateToCreatePage = () => {
         navigate('/create');
     };
+    
+    useEffect(()=>{
+        if (isLoggedIn) navigate("/home");
+    })
+
     const loginUser = useCallback((e) => {
         e.preventDefault();
         const email = e.currentTarget.email.value;
         const password = e.currentTarget.password.value;
         const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-            const user = userCredential.user;
-            setIsLoggedIn(true)
-            setUserInformation({
-                email: user.email,
-                displayName: user.displayName,
-                uid: user.uid,
-                accessToken: user.accessToken,
-            });
-        })
-        .catch((errors) => {
-            const errorCode = errors.code;
-            const errorMessage = errors.message;
-            console.warn({ errors, errorCode, errorMessage})
-            setErrors(errorMessage);
-        }); 
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                setIsLoggedIn(true)
+                setUserInformation({
+                    email: user.email,
+                    displayName: user.displayName,
+                    uid: user.uid,
+                    accessToken: user.accessToken,
+                });
+            })
+            .catch((errors) => {
+                const errorCode = errors.code;
+                const errorMessage = errors.message;
+                console.warn({ errors, errorCode, errorMessage})
+                setErrors(errorMessage);
+            }); 
     }, [setErrors, setIsLoggedIn, setUserInformation])
 
     return (
