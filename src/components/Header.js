@@ -1,4 +1,6 @@
 import { getAuth, signOut } from 'firebase/auth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faRightFromBracket, faPenToSquare, faUser, faLock} from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
 
 function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}){
@@ -22,11 +24,23 @@ function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}
         <header>
             <h1 className='logo'>Entry🗝</h1>
             <nav>
-                <p>Hi {displayName}</p>
-                <a href='/home'>My Entries</a>
-                <a href="/my-profile">My Profile</a>
-                <a href="/entry"> Write an Entry</a>
-                {isLoggedIn && <a onClick={()=>logout()}>Logout</a>}
+                <p className='header-options'>Hi {displayName}</p>
+                <div className='header-options'>
+                    <FontAwesomeIcon icon={faLock} className="icons"/>
+                    <a href='/home'>My Entries</a>
+                </div>
+                <div className='header-options'>
+                    <FontAwesomeIcon icon={faUser} className="icons"/>
+                    <a href="/my-profile">My Profile</a>
+                </div>
+                <div className='header-options'>
+                    <FontAwesomeIcon icon={faPenToSquare} className="icons"/>
+                    <a href="/entry"> Write an Entry</a>
+                </div>
+                <div className='header-options'>
+                    <FontAwesomeIcon icon={faRightFromBracket} className="icons"/>
+                    {isLoggedIn && <a onClick={()=>logout()}>Logout</a>}
+                </div>
             </nav>
         </header>
     );

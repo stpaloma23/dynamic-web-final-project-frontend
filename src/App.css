@@ -43,6 +43,7 @@
   padding: 50px;
   background-color: #A782EC;
   border-radius: 20px;
+  border: #06114F 2px solid;
   min-width: 40%;
   width: 500px;
   margin-bottom: 50px;
@@ -92,6 +93,7 @@ button {
   flex-direction: column;
   padding: 50px;
   background-color: #A782EC;
+  border: #06114F 2px solid;
   border-radius: 20px;
   min-width: 40%;
   width: 500px;
@@ -267,4 +269,13 @@ a {
 button {
   background-color: #06114F;
   color: white;
+}
+.icons {
+  height: 25px;
+  width:25px;
+  margin-right: 13px;
+}
+.header-options{
+  padding: 10px;
+  border-bottom: 1px solid #06114F;
 }
