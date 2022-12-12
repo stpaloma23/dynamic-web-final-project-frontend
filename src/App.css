@@ -61,7 +61,13 @@
 .login-submit-btn{
   margin-bottom: 30px;;
 }
-input {
+textarea {
+  margin-bottom: 30px;
+  width: inherit;
+  height: 30px;
+  border: #06114F 2px solid;
+}
+input{
   margin-bottom: 30px;
   width: inherit;
   height: 30px;
@@ -75,10 +81,11 @@ button {
   height: 75px;
   font-family: "Indie Flower";
   font-size: 40px;
-  padding: 20px;
+  padding: 22px;
   margin-bottom: 30px;
   border-radius: 20px;
-
+  align-self: center;
+  cursor: grab;
 }
 .login-page-contents {
   text-align: center;
@@ -103,7 +110,6 @@ button {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  height: 100vh;
   width: 100%;
   align-items: center;
 }
@@ -118,19 +124,19 @@ button {
   justify-content: space-evenly;
 }
 .awesome {
-  background-color:#66b266;
+  background: url('../src/feelings/awesome.png');
 }
 .good {
-  background-color:#a5d46a;
+  background: url('../src/feelings/good.png');
 }
 .okay {
-  background-color:	#ffff80;
+  background:	url('../src/feelings/okay.png');
 }
 .bad {
-  background-color:	#ffc080;
+  background:	 url('../src/feelings/bad.png');
 }
 .awful {
-  background-color:#ffa080;
+  background: url('../src/feelings/awful.png');
 }
 .feelings-wrapper {
   width: 100%;
@@ -153,14 +159,26 @@ button {
   display: flex;
   flex-direction: column;
 }
-.emotion {
+.emotion-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
 }
-.emotion:hover {
+.emotion-button-visited {
+  border: #06114F solid 2px;
+  border-radius: 20px;
+}
+.emotion-button button {
+  border: 0px;
+}
+.emotion {
+  height:90px;
+  width: 90px;
+  background-size: contain;
+}
+.emotion-button:hover {
   border: #06114F solid 2px;
   border-radius: 20px;
   cursor:grab;
@@ -174,6 +192,7 @@ button {
 .blog-post {
   width: 100%;
   min-height: 170px;
+  resize: vertical;
 }
 .make-entry-button {
   font-family: Shrikhand;
@@ -208,9 +227,10 @@ header {
   display: flex;
   flex-direction: column;
   width: 30%;
-  border-right:  #06114F solid 2px;
+  border-right:  #06114F solid 3px;
   background-color: #A782EC;
   padding-left: 20px;
+  margin-right: 10px;
 }
 nav {
   display: flex;
@@ -265,7 +285,12 @@ nav a {
 }
 a {
   text-decoration: none;
+  font-weight: bold;
 }
+a:visited {
+  color:inherit;
+}
+
 button {
   background-color: #06114F;
   color: white;
@@ -276,6 +301,15 @@ button {
   margin-right: 13px;
 }
 .header-options{
-  padding: 10px;
-  border-bottom: 1px solid #06114F;
+  padding: 5px;
+  cursor: grab;
+}
+.header-options:hover {
+  background-color: #06114F;
+  color:white;
+  margin-right: 10px;
+}
+.page-contents {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,32 +1,48 @@
-import React from 'react';
-import awesome from "../feelings/awesome.png"
-import awful from "../feelings/awful.png"
-import bad from "../feelings/bad.png"
-import good from "../feelings/good.png"
-import okay from "../feelings/okay.png"
+import React, { useState } from 'react';
 
-
-function Feelings({}){
+function Feelings({setFeeling}){
+    const [border, setBorder] = useState(false);
+    function good() {
+        setBorder(true)
+        setFeeling("good");
+    }
+    function awesome() {
+        setBorder(true)
+        setFeeling("awesome");
+    }
+    function bad() {
+        setBorder(true)
+        setFeeling("bad");
+    }
+    function okay() {
+        setBorder(true)
+        setFeeling("okay");
+    }
+    function awful() {
+        setBorder(true)
+        setFeeling("awful");
+    }
+    
     return (
         <div className="feelings-contents">
-            <div className='emotion'>
-                <img className='circle' src={awesome}/>
+            <div className='emotion-button' name="awesomeDay">
+                <button className={border ? "emotion-button-visited emotion awesome" : 'emotion awesome'} onClick={awesome} ></button>
                 <p>Awesome</p>
             </div>
-            <div className='emotion'>
-                <img className='circle' src={good}/>
+            <div className='emotion-button' name="goodDay">
+                <button className={border ? "emotion-button-visited emotion good" : 'emotion good'} onClick={good}></button>
                 <p>Good</p>
             </div>
-            <div className='emotion'>
-                <img className='circle' src={okay}/>
+            <div className='emotion-button' name="okayDay">
+                <button className={border ? "emotion-button-visited emotion okay" : 'emotion okay'} onClick={okay}></button>
                 <p>Okay</p>
             </div>
-            <div className='emotion'>
-                <img className='circle' src={bad}/>
+            <div className='emotion-button' name="badDay">
+                <button className={border ? "emotion-button-visited emotion bad" : 'emotion bad'} onClick={bad}></button>
                 <p>Bad</p>
             </div>
-            <div className='emotion'>
-                <img className='circle' src={awful}/>
+            <div className='emotion-button' name="awfulDay">
+                <button className={border ? "emotion-button-visited emotion awful" : 'emotion awful'} onClick={awful}></button>
                 <p>Awful</p>
             </div>
         </div>

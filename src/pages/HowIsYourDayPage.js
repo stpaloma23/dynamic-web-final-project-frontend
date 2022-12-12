@@ -11,6 +11,7 @@ function HowIsYourDayPage(){
     const navigateToHomePage = () => {
         navigate('/home');
     };
+    console.log(feeling);
     return (
         <div className="page-wrapper create-entry-wrapper">
             <div className="create-entry-content-wrapper">
@@ -21,9 +22,11 @@ function HowIsYourDayPage(){
                     <div className="journal-entry-wrapper">
                         <h1>How was your day?</h1>
                         <div className="feelings-wrapper">
-                            <Feelings/>
+                            <Feelings 
+                                setFeeling={setFeeling}
+                            />
                             <label htmlFor="blogPost"><h4>Tell us about it</h4></label>
-                            <input type="text" name="blogPost" className="blog-post"/>
+                            <textarea type="text" name="blogPost" className="blog-post"/>
                             <div className="submit-or-close-buttons">
                                 <button className="make-entry-button">Add Your Entry</button>
                                 <button className="close-entry-button" onClick={navigateToHomePage}>close</button>

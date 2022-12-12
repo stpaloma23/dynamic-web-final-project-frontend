@@ -24,7 +24,7 @@ function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}
         <header>
             <h1 className='logo'>Entry🗝</h1>
             <nav>
-                <p className='header-options'>Hi {displayName}</p>
+                <p>Hi {displayName}</p>
                 <div className='header-options'>
                     <FontAwesomeIcon icon={faLock} className="icons"/>
                     <a href='/home'>My Entries</a>
@@ -35,7 +35,7 @@ function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}
                 </div>
                 <div className='header-options'>
                     <FontAwesomeIcon icon={faPenToSquare} className="icons"/>
-                    <a href="/entry"> Write an Entry</a>
+                    <a href="/entry">Write an Entry</a>
                 </div>
                 <div className='header-options'>
                     <FontAwesomeIcon icon={faRightFromBracket} className="icons"/>
