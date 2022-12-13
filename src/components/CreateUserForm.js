@@ -1,8 +1,6 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
 
 function CreateUserForm({createUser}) {
-    const navigate = useNavigate();
     
     return (
         <form className='form-element' onSubmit={(e) => createUser(e)}>

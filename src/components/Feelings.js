@@ -3,22 +3,22 @@ import React, { useState } from 'react';
 function Feelings({setFeeling}){
     const [border, setBorder] = useState(false);
     function good() {
-        setBorder(true)
+        setBorder(true);
         setFeeling("good");
     }
     function awesome() {
-        setBorder(true)
+        setBorder(true);
         setFeeling("awesome");
     }
     function bad() {
-        setBorder(true)
+        setBorder(true);
         setFeeling("bad");
     }
     function okay() {
-        setBorder(true)
+        setBorder(true);
         setFeeling("okay");
     }
-    function awful() {
+    function awful() {;
         setBorder(true)
         setFeeling("awful");
     }

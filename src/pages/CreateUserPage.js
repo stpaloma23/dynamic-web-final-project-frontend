@@ -53,7 +53,7 @@ function CreateUserPage({setIsLoggedIn, setUserInformation, isLoggedIn}){
                     setErrors(errorMessage);
                 });
         },
-        [setErrors, setIsLoggedIn, setUserInformation]
+        [setErrors, setIsLoggedIn, setUserInformation, errors]
     );
     return (
         <div className="page-wrapper create-page-wrapper">

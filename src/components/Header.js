@@ -39,7 +39,7 @@ function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}
                 </div>
                 <div className='header-options'>
                     <FontAwesomeIcon icon={faRightFromBracket} className="icons"/>
-                    {isLoggedIn && <a onClick={()=>logout()}>Logout</a>}
+                    {isLoggedIn && <p onClick={()=>logout()}>Logout</p>}
                 </div>
             </nav>
         </header>
