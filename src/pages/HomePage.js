@@ -20,6 +20,7 @@ function HomePage({app, userInformation, isLoggedIn, setIsLoggedIn, setUserInfor
                 app={app}
                 postData={postData}
                 setPostData={setPostData}
+                userInformation={userInformation}
             />
         </div>
     );

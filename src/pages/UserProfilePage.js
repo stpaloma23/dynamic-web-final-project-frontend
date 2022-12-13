@@ -22,10 +22,10 @@ function UserProfilePage({userInformation, isLoggedIn, setIsLoggedIn, setUserInf
                 <h1>My Profile Page</h1>
                 <h2>Current Mood:</h2>
                 <div className="current-mood-pfp"></div>
-                <p>Name: {userInformation.displayName}</p>
-                <p>Email: {userInformation.email}</p>
-                <p>Number of Entries: </p>
-                <h2>Mood Count:</h2>
+                <p><strong>Name:</strong> {userInformation.displayName}</p>
+                <p><strong>Email:</strong> {userInformation.email}</p>
+                <p><strong>Number of Entries:</strong> </p>
+                <h2><strong>Mood Count:</strong></h2>
                 <div className="mood-count-wrapper">
                     <div className="mood-count">
                         <img src={awesome} alt="awesome day emoji"/>

@@ -50,7 +50,7 @@ function HowIsYourDayPage({app, userInformation}){
                             <Feelings 
                                 setFeeling={setFeeling}
                             />
-                            <label htmlFor="blogPost"><h4>Tell us about it {today}</h4></label>
+                            <label htmlFor="blogPost"><h4>Tell us about {today}: </h4></label>
                             <textarea type="text" name="blogPost" className="blog-post"/>
                             <div className="submit-or-close-buttons">
                                 <button className="make-entry-button" type="submit">Add Your Entry</button>

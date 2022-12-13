@@ -26,23 +26,23 @@ function Feelings({setFeeling}){
     return (
         <div className="feelings-contents">
             <div className='emotion-button' name="awesomeDay">
-                <button className={border ? "emotion-button-visited emotion awesome" : 'emotion awesome'} onClick={awesome} ></button>
+                <button type="button" className={border ? "emotion-button-visited emotion awesome" : 'emotion awesome'} onClick={awesome} ></button>
                 <p>Awesome</p>
             </div>
             <div className='emotion-button' name="goodDay">
-                <button className={border ? "emotion-button-visited emotion good" : 'emotion good'} onClick={good}></button>
+                <button type="button" className={border ? "emotion-button-visited emotion good" : 'emotion good'} onClick={good}></button>
                 <p>Good</p>
             </div>
             <div className='emotion-button' name="okayDay">
-                <button className={border ? "emotion-button-visited emotion okay" : 'emotion okay'} onClick={okay}></button>
+                <button type="button" className={border ? "emotion-button-visited emotion okay" : 'emotion okay'} onClick={okay}></button>
                 <p>Okay</p>
             </div>
             <div className='emotion-button' name="badDay">
-                <button className={border ? "emotion-button-visited emotion bad" : 'emotion bad'} onClick={bad}></button>
+                <button type="button" className={border ? "emotion-button-visited emotion bad" : 'emotion bad'} onClick={bad}></button>
                 <p>Bad</p>
             </div>
             <div className='emotion-button' name="awfulDay">
-                <button className={border ? "emotion-button-visited emotion awful" : 'emotion awful'} onClick={awful}></button>
+                <button type="button" className={border ? "emotion-button-visited emotion awful" : 'emotion awful'} onClick={awful}></button>
                 <p>Awful</p>
             </div>
         </div>

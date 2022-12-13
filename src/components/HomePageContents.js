@@ -1,41 +1,41 @@
 import React, { useEffect } from 'react';
 import PostCard from './PostCard';
-import {getFirestore, collection, getDocs} from "firebase/firestore"
+import {getFirestore, collection, getDocs, where, query} from "firebase/firestore"
 
 // 12 mins
-const queryData = async(app)=>{
+const queryData = async(app,userInformation)=>{
     if (!app) return [];
     const db = getFirestore(app);
-    const querySnapshot = await getDocs(collection(db, "posts"));
+    const querySnapshot = await getDocs(query(collection(db, "posts"), where("userId", "==", userInformation.uid)));
     const data = [];
     querySnapshot.forEach((doc) => {
         data.push(doc.data());
     });
     return data
 };
-function HomePageContents({app, postData, setPostData}){
+function HomePageContents({app, postData, setPostData, userInformation}){
     
     useEffect(() => {
         if(!app) return;
-        queryData(app).then(setPostData);
-    }, [app, setPostData])
+        queryData(app, userInformation).then(setPostData);
+    }, [app, setPostData, userInformation])
 
     console.log({postData})
     return (
         <div className="home-page-contents-wrapper">
             <h1 className='my-entries-title'>My Entries </h1>
-            <div className="home-page-feed">
-                {postData.map((post) => (
-                    <PostCard
-                        date={post.date}
-                        description={post.description}
-                        mood={post.mood}
-                        userId={post.userId}
-                        username={post.username}
-                    />
+                {postData.map((post, i) => (
+                    <div className="home-page-feed" key={i}>
+                        <PostCard
+                            date={post.date}
+                            description={post.description}
+                            mood={post.mood}
+                            userId={post.userId}
+                            username={post.username}
+                        />
+                    </div>
                 ))}
             </div>
-        </div>
     );
 };
 export default HomePageContents;

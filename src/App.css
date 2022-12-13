@@ -263,6 +263,16 @@ nav a {
 .profile-page-wrapper{
   display: flex;
   flex-direction: row;
+  height: 100vh;
+}
+.profile-page-contents p {
+  font-size: 25px;
+}
+.profile-page-contents {
+  margin-top: 40px;
+}
+.profile-page-contents h1 {
+  font-size: 40px;
 }
 .create-entry-content-wrapper {
   align-items: center;
