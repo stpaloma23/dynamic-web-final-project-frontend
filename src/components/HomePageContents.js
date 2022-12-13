@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import PostCard from './PostCard';
 import {getFirestore, collection, getDocs, where, query} from "firebase/firestore"
 
-// 12 mins
-const queryData = async(app,userInformation)=>{
+const queryData = async(app, userInformation)=>{
     if (!app) return [];
     const db = getFirestore(app);
     const querySnapshot = await getDocs(query(collection(db, "posts"), where("userId", "==", userInformation.uid)));
