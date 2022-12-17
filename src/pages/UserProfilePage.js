@@ -6,10 +6,7 @@ import bad from "../feelings/bad.png"
 import awful from "../feelings/awful.png"
 
 
-function UserProfilePage({userInformation, isLoggedIn, setIsLoggedIn, setUserInformation, postData}){
-    var dict = {"awesome":0, "good":0, "okay": 0, "bad":0, "awful":0};
-    console.log(postData.post);
-
+function UserProfilePage({userInformation, isLoggedIn, setIsLoggedIn, setUserInformation, moods}){
     return (
         <div className="page-wrapper profile-page-wrapper">
             <Header
@@ -20,8 +17,6 @@ function UserProfilePage({userInformation, isLoggedIn, setIsLoggedIn, setUserInf
             />
             <div className="profile-page-contents">
                 <h1>My Profile Page</h1>
-                <h2>Current Mood:</h2>
-                <div className="current-mood-pfp"></div>
                 <p><strong>Name:</strong> {userInformation.displayName}</p>
                 <p><strong>Email:</strong> {userInformation.email}</p>
                 <p><strong>Number of Entries:</strong> </p>
@@ -29,23 +24,23 @@ function UserProfilePage({userInformation, isLoggedIn, setIsLoggedIn, setUserInf
                 <div className="mood-count-wrapper">
                     <div className="mood-count">
                         <img src={awesome} alt="awesome day emoji"/>
-                        <p>{dict["awesome"]} entries</p>
+                        <p>{moods["awesome"]} entries</p>
                     </div>
                     <div className="mood-count">
                         <img src={good} alt="good day emoji"/>
-                        <p>{dict["good"]} entries</p>
+                        <p>{moods["good"]} entries</p>
                     </div>
                     <div className="mood-count">
                         <img src={okay} alt="okay day emoji"/>
-                        <p>{dict["okay"]} entries</p>
+                        <p>{moods["okay"]} entries</p>
                     </div>
                     <div className="mood-count">
                         <img src={bad} alt="bad day emoji"/>
-                        <p>{dict["bad"]} entries</p>
+                        <p>{moods["bad"]} entries</p>
                     </div>
                     <div className="mood-count">
                         <img src={awful} alt="awful day emoji"/>
-                        <p>{dict["awful"]} entries</p>
+                        <p>{moods["awful"]} entries</p>
                     </div>
                 </div>
             </div>

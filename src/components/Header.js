@@ -5,7 +5,6 @@ import React from 'react';
 
 function Header({isLoggedIn, setIsLoggedIn, userInformation, setUserInformation}){
     var displayName = "";
-    console.log(userInformation); 
     if (isLoggedIn) {
         displayName = userInformation.displayName;
     }

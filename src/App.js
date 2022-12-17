@@ -28,6 +28,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInformation, setUserInformation] = useState({});
   const [postData, setPostData] = useState([]);
+  const [moods, setMoods] = useState({"awesome":0, "good":0, "okay": 0, "bad":0, "awful":0});
 
   useEffect(() => {
     const app = initializeApp(firebaseConfig);
@@ -69,17 +70,7 @@ function App() {
         setUserInformation={setUserInformation}
         setPostData={setPostData}
         postData={postData}
-      />,
-    },
-    {
-      path: "/my-profile",
-      element: <UserProfilePage 
-        isLoading={isLoading}
-        userInformation={userInformation}
-        isLoggedIn={isLoggedIn}
-        setIsLoggedIn={setIsLoggedIn}
-        setUserInformation={setUserInformation}
-        postData={postData}
+        setMoods={setMoods}
       />,
     },
     {
@@ -90,6 +81,17 @@ function App() {
           setIsLoggedIn={setIsLoggedIn}
           setUserInformation={setUserInformation}
         />,
+    },
+    {
+      path: "/my-profile",
+      element: <UserProfilePage 
+        isLoading={isLoading}
+        userInformation={userInformation}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+        setUserInformation={setUserInformation}
+        moods={moods}
+      />,
     },
     {
       path: "/entry",

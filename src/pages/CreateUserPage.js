@@ -72,8 +72,4 @@ function CreateUserPage({setIsLoggedIn, setUserInformation, isLoggedIn}){
         </div>
     );
 }
-/** const moods 
- * usermoods = useMemo(() =>{})
- * posts.map((post)=>{moods[post.mood] = moods[post.mood]+1})
- */
 export default CreateUserPage;

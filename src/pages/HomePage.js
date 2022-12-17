@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import React, { useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
 import HomePageContents from "../components/HomePageContents";
-function HomePage({app, userInformation, isLoggedIn, setIsLoggedIn, setUserInformation, setPostData, postData}){
+function HomePage({app, userInformation, isLoggedIn, setIsLoggedIn, setUserInformation, setPostData, postData, setMoods}){
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -21,6 +21,7 @@ function HomePage({app, userInformation, isLoggedIn, setIsLoggedIn, setUserInfor
                 postData={postData}
                 setPostData={setPostData}
                 userInformation={userInformation}
+                setMoods={setMoods}
             />
         </div>
     );

@@ -2,7 +2,7 @@ import React, {useCallback,useEffect, useState} from "react";
 import { useNavigate} from 'react-router-dom';
 import Feelings from "../components/Feelings";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-// capture existing user id
+
 function HowIsYourDayPage({app, userInformation}){
     const [postSuccessful, setPostSuccessful] = useState(false);
     const [feeling, setFeeling] = useState();
@@ -14,7 +14,6 @@ function HowIsYourDayPage({app, userInformation}){
     useEffect(()=>{
         if (postSuccessful) navigate("/home");
     })
-    console.log(feeling);
     const createPost = useCallback( async (e) => {
         e.preventDefault();
         const db = getFirestore(app);
@@ -22,14 +21,13 @@ function HowIsYourDayPage({app, userInformation}){
         const username = userInformation.displayName
         const uid = userInformation.uid
         try {
-            const docRef = await addDoc(collection(db, "posts"), {
+            await addDoc(collection(db, "posts"), {
                 date: today,
                 description: entry,
                 mood: feeling,
                 userId: uid,
                 username:username,
             });
-            console.log("document written with id: ", docRef.id);
             setPostSuccessful(true);
         } catch(e) {
             console.error("Error adding document: ", e)
