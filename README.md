@@ -1,7 +1,7 @@
 # Final Project 
 - live: https://peaceful-fudge-212658.netlify.app/
-#Project reuirements: 
--Signup Page ->CreateUserPage.js, /create
+- Project reuirements: 
+- Signup Page ->CreateUserPage.js, /create
 - User Profile Page -> UserProfilePage.js, /my-profile
 - A Dashboard or Landing Page -> HomePage.js, /home
 - A Way to Write a Post -> HowIsYourDayPage.js /entry
